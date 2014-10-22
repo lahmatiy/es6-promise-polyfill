@@ -10,7 +10,7 @@ The main target: implementation should be conformance with browser's implementat
 
 It passes both [Promises/A+ test suite](https://github.com/promises-aplus/promises-tests) and [rsvp.js test suite](https://github.com/jakearchibald/es6-promise/tree/master/test). And as small as 2,6KB min (or 1KB min+gzip).
 
-The polyfill uses `setImmediate` if available, or fallback to use `setTimeout`. Use [setImmediate polyfill](https://github.com/YuzuJS/setImmediate) by @YuzuJS to rich better performance.
+The polyfill uses `setImmediate` if available, or fallback to use `setTimeout`. Use [setImmediate polyfill](https://github.com/YuzuJS/setImmediate) by @YuzuJS to reach better performance.
 
 ## How to use
 
