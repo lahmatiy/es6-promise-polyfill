@@ -63,3 +63,7 @@ promise.then(undefined, function(err) {
   // ...
 });
 ```
+
+## License
+
+Licensed under the MIT License.
