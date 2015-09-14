@@ -1,7 +1,7 @@
 {
   "name": "es6-promise-polyfill",
   "namespace": "Promise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
   "description": "A polyfill for ES6 Promise",
   "main": "promise.js",
