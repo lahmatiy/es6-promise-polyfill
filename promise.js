@@ -29,7 +29,7 @@ var nativePromiseSupported =
 if (typeof exports !== 'undefined' && exports)
 {
   // node.js
-  exports.Promise = Promise || NativePromise;
+  exports.Promise = nativePromiseSupported ? NativePromise : Promise;
 }
 else
 {
