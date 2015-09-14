@@ -1,17 +1,15 @@
 {
   "name": "es6-promise-polyfill",
   "namespace": "Promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
   "description": "A polyfill for ES6 Promise",
   "main": "promise.js",
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {
-  },
-  "scripts": {
-  },
+  "devDependencies": {},
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/lahmatiy/es6-promise-polyfill.git"
