@@ -1,7 +1,7 @@
 {
   "name": "es6-promise-polyfill",
   "description": "Polyfill for ES6 Promise",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
   "license": "MIT",
   "repository": "lahmatiy/es6-promise-polyfill",
