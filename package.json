@@ -1,25 +1,22 @@
 {
   "name": "es6-promise-polyfill",
-  "namespace": "Promise",
+  "description": "Polyfill for ES6 Promise",
   "version": "1.0.2",
   "author": "Roman Dvornov <rdvornov@gmail.com>",
-  "description": "A polyfill for ES6 Promise",
-  "main": "promise.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "devDependencies": {},
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/lahmatiy/es6-promise-polyfill.git"
-  },
+  "license": "MIT",
+  "repository": "lahmatiy/es6-promise-polyfill",
   "bugs": {
     "url": "https://github.com/lahmatiy/es6-promise-polyfill/issues"
   },
+  "main": "promise.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
   "keywords": [
-    "promises",
-    "futures",
-    "events"
+    "es6",
+    "es2015",
+    "polyfill",
+    "promise",
+    "promises"
   ]
 }
