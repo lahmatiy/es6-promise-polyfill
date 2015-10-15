@@ -1,3 +1,8 @@
+/**
+ * ES6 Promise polyfill
+ * 
+ * @version 1.0.3
+ */
 (function(global){
 
 //
