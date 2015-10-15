@@ -1,3 +1,13 @@
-# 1.0.0 (june 19, 2014)
+## 1.1.0 (October 16, 2015)
 
-* Init release
+- Change way to get reference to `global`, since `Function()()` may be prohibited
+- Add AMD support
+
+## 1.0.1 (September 14, 2015)
+
+- Fix exports - use polyfill only if native implementation isn't supported
+- Add license
+
+## 1.0.0 (June 19, 2014)
+
+- Init release
