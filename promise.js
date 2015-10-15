@@ -34,15 +34,18 @@ if (typeof exports !== 'undefined' && exports)
 else
 {
   // AMD
-  if ( typeof define == 'function' && define.amd ) {
-    define(function () {
-        return nativePromiseSupported ? NativePromise : Promise;
-    })
+  if (typeof define == 'function' && define.amd)
+  {
+    define(function(){
+      return nativePromiseSupported ? NativePromise : Promise;
+    });
   }
   else
-  // in browser add to global
-  if (!nativePromiseSupported)
-    global['Promise'] = Promise;
+  {
+    // in browser add to global
+    if (!nativePromiseSupported)
+      global['Promise'] = Promise;
+  }
 }
 
 
