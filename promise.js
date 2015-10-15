@@ -323,4 +323,4 @@ Promise.reject = function(reason){
   });
 };
 
-})(new Function('return this')());
+})(typeof window != 'undefined' ? window : typeof global != 'undefined' ? global : typeof self != 'undefined' ? self : this);
