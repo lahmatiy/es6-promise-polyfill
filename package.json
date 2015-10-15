@@ -10,8 +10,18 @@
   },
   "main": "promise.js",
   "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
+  "devDependencies": {
+    "verup": "^1.3"
+  },
+  "scripts": {
+    "verup": "verup"
+  },
+  "verup": {
+    "files": [
+      "promise.js",
+      "bower.json"
+    ]
+  },
   "keywords": [
     "es6",
     "es2015",
