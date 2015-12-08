@@ -9,9 +9,14 @@
     "url": "https://github.com/lahmatiy/es6-promise-polyfill/issues"
   },
   "main": "promise.js",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
+  "dependencies": {
+  },
+  "devDependencies": {
+    "promises-aplus-tests": "*"
+  },
+  "scripts": {
+    "test": "promises-aplus-tests test/test-adapter"
+  },
   "keywords": [
     "es6",
     "es2015",
