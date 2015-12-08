@@ -1,3 +1,8 @@
+## 1.2.0 (December 8, 2015)
+
+- Support for IE8 and below
+- Promises/A+ tests added
+
 ## 1.1.0 (October 16, 2015)
 
 - Change way to get reference to `global`, since `Function()()` may be prohibited
