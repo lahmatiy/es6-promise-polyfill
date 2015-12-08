@@ -199,7 +199,11 @@ function reject(promise, reason){
 }
 
 function publish(promise) {
-  promise.then_ = promise.then_.forEach(invokeCallback);
+  for (var i = 0; i < promise.then_.length; i++) {
+    invokeCallback(promise.then_[i]);
+  }
+
+  promise.then_ = undefined;
 }
 
 function publishFulfillment(promise){
@@ -264,7 +268,7 @@ Promise.prototype = {
 Promise.all = function(promises){
   var Class = this;
 
-  if (!Array.isArray(promises))
+  if (Object.prototype.toString.call(promises) !== "[object Array]")
     throw new TypeError('You must pass an array to Promise.all().');
 
   return new Class(function(resolve, reject){
@@ -298,7 +302,7 @@ Promise.all = function(promises){
 Promise.race = function(promises){
   var Class = this;
 
-  if (!Array.isArray(promises))
+  if (Object.prototype.toString.call(promises) !== "[object Array]")
     throw new TypeError('You must pass an array to Promise.race().');
 
   return new Class(function(resolve, reject) {
