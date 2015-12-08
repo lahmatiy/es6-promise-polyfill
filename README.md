@@ -1,3 +1,6 @@
+[![NPM version](https://img.shields.io/npm/v/es6-promise-polyfill.svg)](https://www.npmjs.com/package/es6-promise-polyfill)
+[![Build Status](https://travis-ci.org/lahmatiy/es6-promise-polyfill.svg?branch=master)](https://travis-ci.org/lahmatiy/es6-promise-polyfill)
+
 # ES6 Promise polyfill
 
 This is a polyfill of [ES6 Promise](https://github.com/domenic/promises-unwrapping). The implementation based on [Jake Archibald implementation](https://github.com/jakearchibald/es6-promise) a subset of [rsvp.js](https://github.com/tildeio/rsvp.js). If you're wanting extra features and more debugging options, check out the [full library](https://github.com/tildeio/rsvp.js).
