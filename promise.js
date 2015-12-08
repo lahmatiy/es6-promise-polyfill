@@ -30,6 +30,7 @@ if (typeof exports !== 'undefined' && exports)
 {
   // node.js
   exports.Promise = nativePromiseSupported ? NativePromise : Promise;
+  exports.Polyfill = Promise;
 }
 else
 {
@@ -58,6 +59,10 @@ var SEALED = 'sealed';
 var FULFILLED = 'fulfilled';
 var REJECTED = 'rejected';
 var NOOP = function(){};
+
+function isArray(value) {
+  return Object.prototype.toString.call(value) === '[object Array]';
+}
 
 // async calls
 var asyncSetTimer = typeof setImmediate !== 'undefined' ? setImmediate : setTimeout;
@@ -199,11 +204,12 @@ function reject(promise, reason){
 }
 
 function publish(promise) {
-  for (var i = 0; i < promise.then_.length; i++) {
-    invokeCallback(promise.then_[i]);
-  }
-
+  var callbacks = promise.then_;
   promise.then_ = undefined;
+
+  for (var i = 0; i < callbacks.length; i++) {
+    invokeCallback(callbacks[i]);
+  }
 }
 
 function publishFulfillment(promise){
@@ -268,7 +274,7 @@ Promise.prototype = {
 Promise.all = function(promises){
   var Class = this;
 
-  if (Object.prototype.toString.call(promises) !== "[object Array]")
+  if (!isArray(promises))
     throw new TypeError('You must pass an array to Promise.all().');
 
   return new Class(function(resolve, reject){
@@ -302,7 +308,7 @@ Promise.all = function(promises){
 Promise.race = function(promises){
   var Class = this;
 
-  if (Object.prototype.toString.call(promises) !== "[object Array]")
+  if (!isArray(promises))
     throw new TypeError('You must pass an array to Promise.race().');
 
   return new Class(function(resolve, reject) {
