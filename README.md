@@ -48,6 +48,21 @@ To use:
 var Promise = require('es6-promise-polyfill').Promise;
 var promise = new Promise(...);
 ```
+### AMD
+
+To install:
+
+```sh
+npm install es6-promise-polyfill
+```
+
+To use:
+
+```js
+define['es6-promise-polyfill'], function(promise_polyfill) {
+var Promise = promise_polyfill.Promise;
+var promise = new Promise(...);
+```
 
 ## Usage in IE<9
 
