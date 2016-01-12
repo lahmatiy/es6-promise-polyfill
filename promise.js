@@ -25,8 +25,16 @@ var nativePromiseSupported =
 //
 // export if necessary
 //
-
-if (typeof exports !== 'undefined' && exports)
+if (typeof define === 'function' && define.amd)
+{
+    define(function() {
+	return {
+	    Promise: nativePromiseSupported ? NativePromise : Promise,
+	    Polyfill: Promise
+	};
+    });
+}
+else if (typeof exports !== 'undefined' && exports)
 {
   // node.js
   exports.Promise = nativePromiseSupported ? NativePromise : Promise;
