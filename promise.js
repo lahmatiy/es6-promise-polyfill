@@ -23,34 +23,6 @@ var nativePromiseSupported =
 
 
 //
-// export if necessary
-//
-
-if (typeof exports !== 'undefined' && exports)
-{
-  // node.js
-  exports.Promise = nativePromiseSupported ? NativePromise : Promise;
-  exports.Polyfill = Promise;
-}
-else
-{
-  // AMD
-  if (typeof define == 'function' && define.amd)
-  {
-    define(function(){
-      return nativePromiseSupported ? NativePromise : Promise;
-    });
-  }
-  else
-  {
-    // in browser add to global
-    if (!nativePromiseSupported)
-      global['Promise'] = Promise;
-  }
-}
-
-
-//
 // Polyfill
 //
 
@@ -342,5 +314,35 @@ Promise.reject = function(reason){
     reject(reason);
   });
 };
+
+//
+// export if necessary
+//
+
+if (typeof exports !== 'undefined' && exports)
+{
+  // node.js
+  exports.Promise = nativePromiseSupported ? NativePromise : Promise;
+  exports.Polyfill = Promise;
+}
+else
+{
+  // AMD
+  if (typeof define == 'function' && define.amd)
+  {
+    define(function(){
+	return {
+	    Promise: nativePromiseSupported ? NativePromise : Promise,
+	    Polyfill: Promise
+	};
+    });
+  }
+  else
+  {
+    // in browser add to global
+    if (!nativePromiseSupported)
+      global['Promise'] = Promise;
+  }
+}
 
 })(typeof window != 'undefined' ? window : typeof global != 'undefined' ? global : typeof self != 'undefined' ? self : this);
