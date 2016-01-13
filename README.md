@@ -49,6 +49,21 @@ var Promise = require('es6-promise-polyfill').Promise;
 var promise = new Promise(...);
 ```
 
+### AMD
+
+To install:
+
+```sh
+npm install es6-promise-polyfill
+```
+
+To use:
+
+```js
+define['es6-promise-polyfill'], function(Promise) {
+var promise = new Promise(...);
+```
+
 ## Usage in IE<9
 
 `catch` is a reserved word in IE<9, meaning `promise.catch(func)` throws a syntax error. To work around this, use a string to access the property:
