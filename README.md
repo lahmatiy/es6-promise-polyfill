@@ -27,7 +27,7 @@ bower install es6-promise-polyfill
 
 To use:
 
-```htmpl
+```html
 <script src="bower_components/es6-promise-polyfill/promise.min.js"></script>
 <script>
   var promise = new Promise(...);
